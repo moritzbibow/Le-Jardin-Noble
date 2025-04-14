@@ -1,0 +1,241 @@
+/* Base Styles */
+:root {
+  --primary-bg: #eaeaf8;
+  --white: #ffffff;
+  --text-color: #252525;
+  --light-gray: #cecece;
+  --shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  --border-radius-large: 5rem;
+  --border-radius-medium: 1.5rem;
+  --border-radius-small: 50px;
+  --transition: background-color 0.3s, transform 0.3s;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary-bg);
+  font-family: "Domine", serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Buttons */
+.button, button {
+  background-color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-small);
+  font-family: "Domine", serif;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button:hover, button:hover {
+  background-color: var(--light-gray);
+  transform: scale(1.07);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  width: 4%;
+  min-width: 40px;
+  max-width: 80px;
+}
+
+.navbar {
+  background-color: var(--white);
+  border-radius: var(--border-radius-large);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 2%;
+  padding: 3px;
+  box-shadow: var(--shadow);
+  gap: 2px;
+}
+
+.nav-item button {
+  background-color: var(--white);
+  border-radius: var(--border-radius-small);
+}
+
+.header-icons {
+  display: flex;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  gap: 10px;
+}
+
+.bag-item button, .login-item button {
+  background-color: var(--white);
+  border-radius: var(--border-radius-large);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.bag-item img, .login-item img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Main Content */
+main {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.startscreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.marketing-infos {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-medium);
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.marketing-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.marketing-info-item img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.marketing-info-item h4 {
+  color: var(--text-color);
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Gesamt-Footer */
+footer {
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: "Domine", serif;
+  padding: 40px 0 20px;
+}
+
+/* Beide Reihen – fester Abstand zum Seitenrand */
+.container-top,
+.container-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Jede Spalte */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Überschriften */
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* Listen */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+/* Links */
+.footer-section a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #888;
+}
+
+/* Social Icons */
+.social-icons {
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons:hover {
+  transform: scale(1.1);
+}
+
+/* Zahlungsmethoden-Bild */
+.footer-section img[alt="Bezahlungsmöglichkeiten"] {
+  max-width: 180px;
+  height: auto;
+}
